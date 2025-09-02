@@ -9,7 +9,7 @@ document.getElementById('login-btn')
     .addEventListener('click', () => {
         // get the phn and password input field
 
-        const getPhnInput = document.getElementById('phn-number').value;
+        const getPhnInput = parseInt(document.getElementById('phn-number').value);
         const getPassWord = parseInt(document.getElementById('password').value);
 
         //lets Check the Phn No and Pass and redirect to the home page
@@ -28,7 +28,9 @@ document.getElementById('login-btn')
 
         if(phnNumberToNum == getPhnInput && passWord === getPassWord) {
             window.location.href = 'home.html'
+            return
         } else {
             alert('Your Id or Pass Word is Wrong')
+            return
         }
     })
