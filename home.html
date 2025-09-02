@@ -24,25 +24,88 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 </head>
-<body>
-    <!-- Users Header Design -->
-    <section>
-        <header class="flex justify-between max-w-[450px] h-20 mx-auto mt-4 items-center">
-            <div class="header-column1 flex justify-between gap-2 items-center">
-                <div class="header-column1-balance">
-                    <img src="assets/Group.png" alt="Header Logo" class="w-13">
+<body class="max-w-[450px] mx-auto bg-gray-100">
+    <section class="w-full bg-white p-3 rounded-b-3xl mx-auto">
+        <!-- Users Header Design -->
+        <section class="bg-white">
+            <header class="flex justify-between h-20 mx-auto mt-4 items-center">
+                <div class="header-column1 flex justify-between gap-2 items-center">
+                    <div class="header-column1-balance">
+                        <img src="assets/Group.png" alt="Header Logo" class="w-13">
+                    </div>
+                    <div class="header-column1-logo flex flex-col gap-1">
+                        <p class="font-extrabold text-lg">$<span>45000</span></p>
+                        <p class="text-gray-400 text-sm">Available Balance</p>
+                    </div>
                 </div>
-                <div class="header-column1-logo flex flex-col gap-1">
-                    <p class="font-extrabold text-lg">$<span>45000</span></p>
-                    <p class="text-gray-500 text-sm">Available Balance</p>
+                <div class="header-column2">
+                    <button class="btn rounded-xl text-gray-500 font-normal bg-white"><i class="fa-solid fa-right-from-bracket rotate-180 font-normal"></i>Log Out</button>
+                </div>
+            </header>
+            <hr class="text-gray-200 max-w-[450px] mx-auto">
+        </section>
+
+        <!-- User Transaction Actions Body Design -->
+        <section>
+            <div class="user-body-action flex flex-col justify-start mt-6 gap-6">
+                <h1 class="font-bold text-2xl">🔥 Welcome to Payooo!</h1>
+                <p class="text-base font-normal text-gray-400">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+                <div class="grid grid-cols-3 gap-4 ">
+                    <div class="pay-action-add-money flex flex-col gap-2 w-35 h-[90px] border-solid border-2 rounded-xl border-gray-200 items-center justify-center">
+                        <img src="assets/wallet1.png" alt="Add Money" class="w-6">
+                        <h3 class="text-gray-700/90">Add Money</h3>
+                    </div>
+                    <div class="pay-action-add-money flex flex-col gap-2 w-35 h-[90px] border-solid border-2 rounded-xl border-gray-200 items-center justify-center">
+                        <img src="assets/send1.png" alt="Cash Out" class="w-6">
+                        <h3 class="text-gray-700/90">Cash Out</h3>
+                    </div>
+                    <div class="pay-action-add-money flex flex-col gap-2 w-35 h-[90px] border-solid border-2 rounded-xl border-gray-200 items-center justify-center">
+                        <img src="assets/money1.png" alt="Transfer Money" class="w-6">
+                        <h3 class="text-gray-700/90">Transfer Money</h3>
+                    </div>
+                    <div class="pay-action-add-money flex flex-col gap-2 w-35 h-[90px] border-solid border-2 rounded-xl border-gray-200 items-center justify-center">
+                        <img src="assets/bonus1.png" alt="Get Bonus" class="w-6">
+                        <h3 class="text-gray-700/90">Get Bonus</h3>
+                    </div>
+                    <div class="pay-action-add-money flex flex-col gap-2 w-35 h-[90px] border-solid border-2 rounded-xl border-gray-200 items-center justify-center">
+                        <img src="assets/purse1.png" alt="Pay Bill" class="w-6">
+                        <h3 class="text-gray-700/90">Pay Bill</h3>
+                    </div>
+                    <div class="pay-action-add-money flex flex-col gap-2 w-35 h-[90px] border-solid border-2 rounded-xl border-gray-200 items-center justify-center">
+                        <img src="assets/transaction1.png" alt="Transaction" class="w-6">
+                        <h3 class="text-gray-700/90">Transaction</h3>
+                    </div>
                 </div>
             </div>
-            <div class="header-column2">
-                <button class="btn rounded-xl text-gray-500 font-normal bg-white"><i class="fa-solid fa-right-from-bracket rotate-180 font-normal"></i>Log Out</button>
-            </div>
-        </header>
-        <hr class="text-gray-200 max-w-[450px] mx-auto">
-        
+        </section>
+    </section>
+
+    <!-- Actions Menu Forms Design -->
+    <section class="p-7 mt-4">
+        <div class="add-money w-[100%]">
+            <label for="">Add Money</label>
+            <fieldset class="fieldset p-7 mt-4 bg-white rounded-3xl">
+                <label class="fieldset-legend">Select A Bank</label>
+                <select class="select w-full">
+                    <option disabled selected>select your desired bank</option>
+                    <option>Islami Bank Bangladesh Limited</option>
+                    <option>Mutual Trust Bank PLC</option>
+                    <option>Dutch Bangla Bank PLC</option>
+                </select>
+
+                <label class="fieldset-legend">Bank Account Number</label>
+                <input type="number" class="input w-full" placeholder="Type here" />
+
+                <label class="fieldset-legend">Amount to Add</label>
+                <input type="number" class="input w-full" placeholder="Type here" />
+
+                <label class="fieldset-legend">Pin Number</label>
+                <input type="password" class="input w-full" placeholder="Type here" />
+
+                <button class="btn btn-neutral font-outfit mt-3 bg-[#0874F2] border-none text-white rounded-[32px]">Add Money</button>
+                
+            </fieldset>
+        </div>
     </section>
 
     <script src="script.js"></script>
