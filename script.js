@@ -1,5 +1,6 @@
 
 const phnNumber = '01886324296';
+const phnNumberToNum = Number(phnNumber);
 const passWord = 1234;
 
 // Lets program the log in button and redirect to the log in page
@@ -17,7 +18,7 @@ document.getElementById('login-btn')
         if(getPhnInput == undefined) {
             alert('Provide The Phone Number')
             return
-        }else if(getPhnInput != phnNumber) {
+        }else if(getPhnInput !== phnNumberToNum) {
             alert('Your Phone No Did Not Matched')
             return
         }else if(passWord !== getPassWord) {
@@ -25,7 +26,7 @@ document.getElementById('login-btn')
             return
         }
 
-        if(phnNumber == getPhnInput && passWord === getPassWord) {
+        if(phnNumberToNum == getPhnInput && passWord === getPassWord) {
             window.location.href = 'home.html'
         } else {
             alert('Your Id or Pass Word is Wrong')
